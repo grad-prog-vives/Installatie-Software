@@ -23,6 +23,7 @@ header {
     background-color: #f4f4f4;
     border-right: 1px solid #ddd;
     padding-top: 20px;
+    height: 100vh; /* vult de volledige hoogte van het scherm */
 }
 
 .sidebar ul {
@@ -46,4 +47,26 @@ header {
 #content {
     padding: 20px;
     flex: 1;
+}
+
+/* URL's */
+a {
+    color: #0078d7;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* figuren */
+.figuur {
+    max-width: 40%;          /* afbeelding schaalt mooi mee */
+    border: 1px solid #ddd;   /* subtiel kader */
+    border-radius: 8px;       /* afgeronde hoeken */
+    padding: 10px;            /* ruimte rond de afbeelding */
+    background-color: #f9f9f9;/* lichte achtergrond */
+    margin: 20px 0;           /* ruimte boven en onder */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* zachte schaduw */
+    display: block;
 }
