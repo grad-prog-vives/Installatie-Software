@@ -20,11 +20,72 @@
         <main id="content"></main>
     </div>
 
+        <script>
+        // HEADER laden
+        const headerPromise = fetch("header.html")
+            .then(r => r.text())
+            .then(t => document.getElementById("header").innerHTML = t);
+
+        // SIDEBAR laden
+        const sidebarPromise = fetch("sidebar.html")
+            .then(r => r.text())
+            .then(t => document.getElementById("sidebar").innerHTML = t);
+
+        // Wacht tot header én sidebar geladen zijn
+        Promise.all([headerPromise, sidebarPromise]).then(() => {
+            const headerHeight = document.getElementById("header").offsetHeight;
+            document.getElementById("sidebar").style.top = headerHeight + "px";
+        });
+
+        // INHOUD dynamisch laden
+        function loadPage(page) {
+            fetch(page)
+                .then(r => r.text())
+                .then(t => document.getElementById("content").innerHTML = t);
+        }
+
+        // Startpagina
+        loadPage("pages/home.html");
+    </script>
+    
     <script>
+        /*
+        const headerPromise = fetch("header.html")
+        .then(r => r.text())
+        .then(t => document.getElementById("header").innerHTML = t);
+
+        const sidebarPromise = fetch("sidebar.html")
+        .then(r => r.text())
+        .then(t => document.getElementById("sidebar").innerHTML = t);
+
+
+        // Wacht tot header én sidebar geladen zijn
+        Promise.all([headerPromise, sidebarPromise]).then(() => {
+        const headerHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("sidebar").style.top = headerHeight + "px";
+    
+
+
+        // INHOUD dynamisch laden
+        function loadPage(page) {
+            fetch(page)
+                .then(r => r.text())
+                .then(t => document.getElementById("content").innerHTML = t);
+        }
+
+    loadPage("pages/home.html");
+    */
+        /*
         // HEADER laden
         fetch("header.html")
             .then(r => r.text())
-            .then(t => document.getElementById("header").innerHTML = t);
+            .then(t => {
+                document.getElementById("header").innerHTML = t;
+
+                // Sidebar pas positioneren NA het laden van de header
+                const headerHeight = document.getElementById("header").offsetHeight;
+                document.getElementById("sidebar").style.top = headerHeight + "px";
+                });
 
         // SIDEBAR laden
         fetch("sidebar.html")
@@ -40,6 +101,7 @@
 
         // Standaardpagina
         loadPage("pages/home.html");
+        */
     </script>
 
 </body>

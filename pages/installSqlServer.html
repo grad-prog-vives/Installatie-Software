@@ -16,12 +16,12 @@ SQL Server is een volledige SQL‑server voor lokaal gebruik.
 
         <h3>2. Installatie uitvoeren</h3>
         <ul>
-            <li>Open het gedownloade bestand (<code>SQL2025-SSEI-Expr.exe</code>).</li>
+            <li>Open het gedownloade bestand (<code>SQL2025-SSEI-Expr.exe</code>).
             <ul>
-                <li>Geef eventueel toestemming dat de app wijzingen mag aanbrengen aan het apparaat
-                     <img src="assets/img/SQLServer/2_WijzingenApparaat.png" alt="Download Media" class="figuur">
-                </li>
+                <li>Geef eventueel toestemming dat de app wijzingen mag aanbrengen aan het apparaat</li>
             </ul>
+            <img src="assets/img/SQLServer/2_WijzingenApparaat.png" alt="Download Media" class="figuur">
+            </li>
             <li>Kies <strong>Download Media</strong> installatie.
                 <img src="assets/img/SQLServer/3_DownloadMedia.png" alt="Download Media" class="figuur">
             </li>
@@ -35,26 +35,56 @@ SQL Server is een volledige SQL‑server voor lokaal gebruik.
                         <img src="assets/img/SQLServer/5_DownloadSuccesful.png" alt="Download Succesful" class="figuur">
                     </li>
                 </ul>
-            <li>Volg de stappen tot de installatie voltooid is.</li>
+            <li>In de Downloads map zal je het bestand zien staan die SQL Server zal installeren (<code>SQLEXPR_x64_ENU.exe</code>).</li>
         </ul>
 
-        <h3>3. Installatie van SQL Server Management Studio (SSMS)</h3>
+        <h3>3. Installatie van SQL Server </h3>
         <ul>
-            <li>Download SSMS via de link op de SQL Server‑installatiepagina.</li>
-            <li>Installeer SSMS met de standaardinstellingen.</li>
-            <li>Start SSMS en maak verbinding met <code>(local)</code> of <code>localhost</code>.</li>
-        </ul>
+            <li>Open het bestand (<code>SQLEXPR_x64_ENU.exe</code>).</li>
+            <li>Kies voor <strong>New SQL Server standalone installtion or add features to an existing installation</strong>
+                <img src="assets/img/SQLServer/8_Install.png" alt="Install 1" class="figuur">
+            </li>
+            <li>Accepteer de licentie overeenkomst en klink op <strong>Next</strong>
+                <img src="assets/img/SQLServer/9_Install.png" alt="Licentie overeenkomst" class="figuur">
+            </li>
+            <li>Vink automatische updates <strong>niet</strong> aan.
+                <img src="assets/img/SQLServer/10_Install.png" alt="Updates" class="figuur">
+            </li>
+            <li>Install Rules: Als je op onderstaand scherm een warning krijg bij Windows Firewall is dit niet erg, al de rest moet wel een passed geven
+                <img src="assets/img/SQLServer/11_Install_orig.png" alt="Install Rules" class="figuur">
+            </li>
+            <li>Azure Extension for SQL Server <strong>vink je uit</strong>.
+                <img src="assets/img/SQLServer/12_Install.png" alt="Azure Extensions" class="figuur">
+            </li>
+            <li>Features: Alles mag hier blijven staan of vink eventueel LocalDB aan
+                <img src="assets/img/SQLServer/13_Install.png" alt="Azure Extensions" class="figuur">
+            </li>
+            <li>Configuratie van de Instance, gaan we de instance aanpassen naar <strong>VIVES</strong>
+                <img src="assets/img/SQLServer/14_Install.png" alt="Instance" class="figuur">
+            </li>
+            <li>Bij de Server Configuration mag alles blijven staan en moet er niets aangepast worden
+                <img src="assets/img/SQLServer/15_Install_orig.png" alt="Server configuration" class="figuur">
+            </li>
+            <li>Bij de Database Engine Configuration kiezen we voor <strong>Mixed Mode</strong><br>
+                Als paswoord nemen we <strong>Vives2627?</strong><br>
+                Indien er niets bij SQL Server administrator staat, mag je op <strong>Add Current User</strong> klikken
+                <img src="assets/img/SQLServer/16_Install.png" alt="Database Engine Configration" class="figuur">
+            </li>
+            <li>SQL Server wordt met de ingeslde gegevens geïnstalleerd.
+                <img src="assets/img/SQLServer/17_Install_orig.png" alt="Installation" class="figuur">
+            </li>
+            <li>Als alles geïnstalleerd is, krijg je een overzicht op het einde alsook dat alles geslaagd is en klik op <strong>Close</strong>
+                <img src="assets/img/SQLServer/18_Install_orig.png" alt="Install Complete" class="figuur">
+            </li>
+             <li>Je zal terug het eerste scherm te zien krijgen
+                <img src="assets/img/SQLServer/8_Install_orig.png" alt="Install 1" class="figuur">
+            </li>
+        </ul>  
+</div>
 
-        <h3>4. Controle</h3>
-        <ul>
-            <li>Open SSMS en controleer of de server draait.</li>
-            <li>Maak een testdatabase aan via <strong>New Database</strong>.</li>
-        </ul>
 
-        <h3>5. Tips</h3>
-        <ul>
-            <li>Gebruik de Developer Edition voor alle oefeningen.</li>
-            <li>Noteer het wachtwoord van de <code>sa</code>‑gebruiker veilig.</li>
-            <li>Installeer ook <strong>Azure Data Studio</strong> als alternatief.</li>
-        </ul>
+<footer>
+    <div class="footer-content">
+        <p>Laatste update: augustus 2026</p>
     </div>
+</footer>
