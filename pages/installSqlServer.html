@@ -2,84 +2,84 @@
 SQL Server is een volledige SQL‑server voor lokaal gebruik.
 
 <div class="content">
-        <h3>1. Downloaden van SQL Server Express</h3>
-        <ul>
-            <li>Ga naar de <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads">officiële Microsoft‑website</a> om sql server te downloaden. </li>
-            <li>Zoek op de website naar <strong>Get started with SQL Server on-premises or in the cloud</strong>.
-                <img src="assets/img/SQLServer/1_Software.png" alt="Te zoeken titel voor software" class="figuur">
-            </li>
-            <li>Download het installatiebestand bij de versie <strong>SQL Server 2025 Express</strong>.
-                <img src="assets/img/SQLServer/1_DownloadSQLServer.png" alt="Screenshot te downloaden versie: SQL Server 2025 Express" class="figuur">
-            </li>
-            <li>Je zal in je Downloadsmap het gedownload bestand zien staan (<code>SQL2025-SSEI-Expr.exe</code>).</li>
-        </ul>
+    <h3>1. Downloaden van SQL Server Express</h3>
+    <ul>
+        <li>Ga naar de <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads">officiële Microsoft‑website</a> om sql server te downloaden. </li>
+        <li>Zoek op de website naar <strong>Get started with SQL Server on-premises or in the cloud</strong>.
+            <img src="assets/img/SQLServer/1_Software.png" alt="Te zoeken titel voor software" class="figuur">
+        </li>
+        <li>Download het installatiebestand bij de versie <strong>SQL Server 2025 Express</strong>.
+            <img src="assets/img/SQLServer/1_DownloadSQLServer.png" alt="Screenshot te downloaden versie: SQL Server 2025 Express" class="figuur">
+        </li>
+        <li>Je zal in je Downloadsmap het gedownload bestand zien staan (<code>SQL2025-SSEI-Expr.exe</code>).</li>
+    </ul>
 
-        <h3>2. Installatie uitvoeren</h3>
+    <h3>2. Installatie uitvoeren</h3>
+    <ul>
+        <li>Open het gedownloade bestand (<code>SQL2025-SSEI-Expr.exe</code>).
         <ul>
-            <li>Open het gedownloade bestand (<code>SQL2025-SSEI-Expr.exe</code>).
+            <li>Geef eventueel toestemming dat de app wijzingen mag aanbrengen aan het apparaat</li>
+        </ul>
+        <img src="assets/img/SQLServer/2_WijzingenApparaat.png" alt="Download Media" class="figuur">
+        </li>
+        <li>Kies <strong>Download Media</strong> installatie.
+            <img src="assets/img/SQLServer/3_DownloadMedia.png" alt="Download Media" class="figuur">
+        </li>
             <ul>
-                <li>Geef eventueel toestemming dat de app wijzingen mag aanbrengen aan het apparaat</li>
+                <li>Kies als taal: <strong>English</strong></li>
+                <li>Kies als package: <strong>Express Core</strong>
+                    <img src="assets/img/SQLServer/4_DownloadMedia.png" alt="Download Media" class="figuur">
+                </li>
+                <li>Klik op <strong>Download</strong></li>
+                <li>Je zal een melding krijgen dat het downloaden is gelukt en klik op <strong>Open folder</strong>
+                    <img src="assets/img/SQLServer/5_DownloadSuccesful.png" alt="Download Succesful" class="figuur">
+                </li>
             </ul>
-            <img src="assets/img/SQLServer/2_WijzingenApparaat.png" alt="Download Media" class="figuur">
-            </li>
-            <li>Kies <strong>Download Media</strong> installatie.
-                <img src="assets/img/SQLServer/3_DownloadMedia.png" alt="Download Media" class="figuur">
-            </li>
-                <ul>
-                    <li>Kies als taal: <strong>English</strong></li>
-                    <li>Kies als package: <strong>Express Core</strong>
-                        <img src="assets/img/SQLServer/4_DownloadMedia.png" alt="Download Media" class="figuur">
-                    </li>
-                    <li>Klik op <strong>Download</strong></li>
-                    <li>Je zal een melding krijgen dat het downloaden is gelukt en klik op <strong>Open folder</strong>
-                        <img src="assets/img/SQLServer/5_DownloadSuccesful.png" alt="Download Succesful" class="figuur">
-                    </li>
-                </ul>
-            <li>In de Downloads map zal je het bestand zien staan die SQL Server zal installeren (<code>SQLEXPR_x64_ENU.exe</code>).</li>
-        </ul>
+        <li>In de Downloads map zal je het bestand zien staan die SQL Server zal installeren (<code>SQLEXPR_x64_ENU.exe</code>).</li>
+    </ul>
 
-        <h3>3. Installatie van SQL Server </h3>
-        <ul>
-            <li>Open het bestand (<code>SQLEXPR_x64_ENU.exe</code>).</li>
-            <li>Kies voor <strong>New SQL Server standalone installtion or add features to an existing installation</strong>
-                <img src="assets/img/SQLServer/8_Install.png" alt="Install 1" class="figuur">
-            </li>
-            <li>Accepteer de licentie overeenkomst en klink op <strong>Next</strong>
-                <img src="assets/img/SQLServer/9_Install.png" alt="Licentie overeenkomst" class="figuur">
-            </li>
-            <li>Vink automatische updates <strong>niet</strong> aan.
-                <img src="assets/img/SQLServer/10_Install.png" alt="Updates" class="figuur">
-            </li>
-            <li>Install Rules: Als je op onderstaand scherm een warning krijg bij Windows Firewall is dit niet erg, al de rest moet wel een passed geven
-                <img src="assets/img/SQLServer/11_Install_orig.png" alt="Install Rules" class="figuur">
-            </li>
-            <li>Azure Extension for SQL Server <strong>vink je uit</strong>.
-                <img src="assets/img/SQLServer/12_Install.png" alt="Azure Extensions" class="figuur">
-            </li>
-            <li>Features: Alles mag hier blijven staan of vink eventueel LocalDB aan
-                <img src="assets/img/SQLServer/13_Install.png" alt="Azure Extensions" class="figuur">
-            </li>
-            <li>Configuratie van de Instance, gaan we de instance aanpassen naar <strong>VIVES</strong>
-                <img src="assets/img/SQLServer/14_Install.png" alt="Instance" class="figuur">
-            </li>
-            <li>Bij de Server Configuration mag alles blijven staan en moet er niets aangepast worden
-                <img src="assets/img/SQLServer/15_Install_orig.png" alt="Server configuration" class="figuur">
-            </li>
-            <li>Bij de Database Engine Configuration kiezen we voor <strong>Mixed Mode</strong><br>
-                Als paswoord nemen we <strong>Vives2627?</strong><br>
-                Indien er niets bij SQL Server administrator staat, mag je op <strong>Add Current User</strong> klikken
-                <img src="assets/img/SQLServer/16_Install.png" alt="Database Engine Configration" class="figuur">
-            </li>
-            <li>SQL Server wordt met de ingeslde gegevens geïnstalleerd.
-                <img src="assets/img/SQLServer/17_Install_orig.png" alt="Installation" class="figuur">
-            </li>
-            <li>Als alles geïnstalleerd is, krijg je een overzicht op het einde alsook dat alles geslaagd is en klik op <strong>Close</strong>
-                <img src="assets/img/SQLServer/18_Install_orig.png" alt="Install Complete" class="figuur">
-            </li>
-             <li>Je zal terug het eerste scherm te zien krijgen
-                <img src="assets/img/SQLServer/8_Install_orig.png" alt="Install 1" class="figuur">
-            </li>
-        </ul>  
+    <h3>3. Installatie van SQL Server </h3>
+    <ul>
+        <li>Open het bestand (<code>SQLEXPR_x64_ENU.exe</code>).</li>
+        <li>Kies voor <strong>New SQL Server standalone installtion or add features to an existing installation</strong>
+            <img src="assets/img/SQLServer/8_Install.png" alt="Install 1" class="figuur">
+        </li>
+        <li>Accepteer de licentie overeenkomst en klink op <strong>Next</strong>
+            <img src="assets/img/SQLServer/9_Install.png" alt="Licentie overeenkomst" class="figuur">
+        </li>
+        <li>Vink automatische updates <strong>niet</strong> aan.
+            <img src="assets/img/SQLServer/10_Install.png" alt="Updates" class="figuur">
+        </li>
+        <li>Install Rules: Als je op onderstaand scherm een warning krijg bij Windows Firewall is dit niet erg, al de rest moet wel een passed geven
+            <img src="assets/img/SQLServer/11_Install_orig.png" alt="Install Rules" class="figuur">
+        </li>
+        <li>Azure Extension for SQL Server <strong>vink je uit</strong>.
+            <img src="assets/img/SQLServer/12_Install.png" alt="Azure Extensions" class="figuur">
+        </li>
+        <li>Features: Alles mag hier blijven staan of vink eventueel LocalDB aan
+            <img src="assets/img/SQLServer/13_Install.png" alt="Azure Extensions" class="figuur">
+        </li>
+        <li>Configuratie van de Instance, gaan we de instance aanpassen naar <strong>VIVES</strong>
+            <img src="assets/img/SQLServer/14_Install.png" alt="Instance" class="figuur">
+        </li>
+        <li>Bij de Server Configuration mag alles blijven staan en moet er niets aangepast worden
+            <img src="assets/img/SQLServer/15_Install_orig.png" alt="Server configuration" class="figuur">
+        </li>
+        <li>Bij de Database Engine Configuration kiezen we voor <strong>Mixed Mode</strong><br>
+            Als paswoord nemen we <strong>Vives2627?</strong><br>
+            Indien er niets bij SQL Server administrator staat, mag je op <strong>Add Current User</strong> klikken
+            <img src="assets/img/SQLServer/16_Install.png" alt="Database Engine Configration" class="figuur">
+        </li>
+        <li>SQL Server wordt met de ingeslde gegevens geïnstalleerd.
+            <img src="assets/img/SQLServer/17_Install_orig.png" alt="Installation" class="figuur">
+        </li>
+        <li>Als alles geïnstalleerd is, krijg je een overzicht op het einde alsook dat alles geslaagd is en klik op <strong>Close</strong>
+            <img src="assets/img/SQLServer/18_Install_orig.png" alt="Install Complete" class="figuur">
+        </li>
+            <li>Je zal terug het eerste scherm te zien krijgen
+            <img src="assets/img/SQLServer/8_Install_orig.png" alt="Install 1" class="figuur">
+        </li>
+    </ul>  
 </div>
 
 

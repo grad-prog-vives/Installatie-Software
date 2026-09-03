@@ -1,22 +1,79 @@
 <h2>Installatie van SQL Server Management Studio (SSMS)</h2>
 Voor het beheren van databases, uitvoeren van queries en werken met stored procedures.
-<p>installatie</p>
 
- <ul>
-            <li>Download SSMS via de link op de SQL Server‑installatiepagina.</li>
-            <li>Installeer SSMS met de standaardinstellingen.</li>
-            <li>Start SSMS en maak verbinding met <code>(local)</code> of <code>localhost</code>.</li>
-        </ul>
+<div class="content">
+    <h3>1. Downloaden van SSMS</h3>
+    <ul>
+        <li>Je had op het einde van het installeren van SQL Server terug het starscherm. <br>
+        Selecteer daar <strong>Install SQL Server Management Tool</strong>
+        <img src="assets/img/SSMS/1_Install.png" alt="Install ssms" class="figuur">
+        </li>
+        <li>
+            Je wordt doorverwezen naar een internetpagina. <br>
+            Bovenaan zal je zien staan <strong>SQL Server Management Studio 22-installatieprogramma downloaden</strong>
+            <img src="assets/img/SSMS/2_Install_orig.png" alt="Download ssms" class="figuur">
+        </li>
+        <li>Je zal in je Downloadsmap het gedownload bestand zien staan (<code>vs_SSMS.exe</code>).</li>
+    </ul>
 
-        <h3>4. Controle</h3>
-        <ul>
-            <li>Open SSMS en controleer of de server draait.</li>
-            <li>Maak een testdatabase aan via <strong>New Database</strong>.</li>
-        </ul>
+    <h3>2. Installatie uitvoeren</h3>
+    <ul>
+        <li>Open het gedownloade bestand (<code>vs_SSMS.exe</code>).<br>
+            Geef eventueel toestemming dat de app wijzingen mag aanbrengen aan het apparaat. 
+            <img src="assets/img/SSMS/3_Install_orig.png" alt="Geef toestemming" class="figuur">
+        </li>
+        <li>Na eventuele toestemming krijg je eventueel onderstaand scherm dat er nog extra zaken moet geïnstalleerd worden. <br>
+            Indien je dit niet krijgt, geen probleem, dan is al het nodig al geïnstalleerd.
+            <img src="assets/img/SSMS/4_Install_orig.png" alt="Geef toestemming" class="figuur">    
+        </li>
+        <li>
+            Je verandert <strong>niets</strong> aan deze instelling, en laat alles <strong>uitgevinkt</strong> staan.
+            En je klikt op <strong>Install</strong>.
+            <img src="assets/img/SSMS/6_Install_orig.png" alt="Install SSMS" class="figuur">
+        </li>
+        <li>
+           Op het einde van de installatie krijg je een melding dat de installatie is voltooid en <strong>start de computer opnieuw op</strong>.
+            <img src="assets/img/SSMS/8_Install_orig.png" alt="Install done" class="figuur">
+        </li>
+    </ul>
 
-        <h3>5. Tips</h3>
-        <ul>
-            <li>Gebruik de Developer Edition voor alle oefeningen.</li>
-            <li>Noteer het wachtwoord van de <code>sa</code>‑gebruiker veilig.</li>
-            <li>Installeer ook <strong>Azure Data Studio</strong> als alternatief.</li>
-        </ul>
+    <h3>3. Controle installatie</h3>
+    <ul>
+        <li>Zoek tussen de apps op je computer naar SQL Server Management Studio 22<br>
+            <img src="assets/img/SSMS/1_Configuratie_orig.png" alt="Start app" class="figuur">
+        </li>
+        <li>Je krijgt de melding om in te loggen met een account. <br>
+            Selecteer hier <strong>skip and add accounts later</strong>.
+            Indien je onderstaande melding krijgt, selecteer hier <strong>no</strong>.          
+            <img src="assets/img/SSMS/2_Configuratie.png" alt="Login account" class="figuur">    
+        </li>
+        <li>
+            Je krijgt onderstaand scherm in in te loggen. <br>
+            Je merkt dat er hier nog niets ingevuld is.
+            <img src="assets/img/SSMS/3_Configuratie_orig.png" alt="Install SSMS" class="figuur">
+            Pas aan met volgende instellingen
+            <ul>
+                <li>Selecteer bovenaan <strong>Browse</strong>. </li>
+                <li>Selecteer onder <strong>Local</strong> de instance <strong>VIVES</strong> met ervoor de naam van je computer.</li>
+                <li>User name: <strog>sa</strog></li>
+                <li>Password: het paswoord van tijdens de installatie. Standaard <strong>Vives2627?</strong></li>
+                <li>Encrypt: <strong>Optional</strong></li>
+                <li>Trust Server Certificate <strong>vink je aan</strong>.</li>
+                <li>Klik op <strong>Connect</strong>.</li>
+            </ul>
+            <img src="assets/img/SSMS/4_Configuratie.png" alt="Instellingen SSMS" class="figuur">
+        </li>
+        <li>Als alles goed gaat, krijg je nu het scherm dat SSMS opgestart is.
+            <img src="assets/img/SSMS/5_Configuratie_orig.png" alt="SSMS" class="figuur"></li>
+        </li>
+        <!-- <li>
+           Op het einde van de installatie krijg je een melding dat de installatie is voltooid en <strong>start de computer opnieuw op</strong>.
+            <img src="assets/img/SSMS/8_Install_orig.png" alt="Install done" class="figuur">
+        </li> -->
+    </ul>
+
+<footer>
+    <div class="footer-content">
+        <p>Laatste update: september 2026</p>
+    </div>
+</footer>

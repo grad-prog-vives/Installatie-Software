@@ -4,7 +4,7 @@ html {
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     overflow-y: visible;
     scrollbar-gutter: stable; /* houdt ruimte voor scrollbar vrij */
 }
@@ -23,6 +23,7 @@ header {
     right: 0;        
     z-index: 1000;   /* voorkomt overlap */
 }
+
 
 /* Layout */
 .container {
@@ -74,6 +75,15 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 a:hover {
+    text-decoration: none;
 }
 
 /* figuren */
