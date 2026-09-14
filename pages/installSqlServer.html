@@ -56,6 +56,17 @@ databaseobjecten zoals tabellen, views en stored procedures.
         </li>
         <li>Install Rules: Als je op onderstaand scherm een warning krijg bij Windows Firewall is dit niet erg, al de rest moet wel een passed geven
             <img src="assets/img/SQLServer/11_Install_orig.png" alt="Install Rules" class="figuur">
+            Stel dat je op dit moment onderstaand fout krijgt, klik je beter op cancel. En los je dit eerst op voordat je de installatie opnieuw start.
+            <img src="assets/img/SQLServer/Error1.png" alt="Error" class="figuur">
+              <ol>
+                <li>Run Registry Editor als administrator uitvoeren.</li>
+                <li>Navigeer naar <code> Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device </code></li>
+                <li>Selecteer <strong>>Edit</strong> → <strong>New</strong> → <strong>Multi-String value</strong> en geef dit de naam <strong>ForcedPhysicalSectorSizeInBytes</strong></li>
+                <li>Rechtermuisklik op de naam en selecteer <strong>Modify</strong> en typ <code>* 4095</code> in het <strong>Value Data veld</strong></li>
+                <li>Klik op <strong>OK</strong> en sluit het register.</li>
+                <li>Herstart de computer en run de installatie van SQL Server opnieuw</li>
+            </ol>
+            <br>
         </li>
         <li>Azure Extension for SQL Server <strong>vink je uit</strong>.
             <img src="assets/img/SQLServer/12_Install.png" alt="Azure Extensions" class="figuur">
@@ -79,6 +90,18 @@ databaseobjecten zoals tabellen, views en stored procedures.
         </li>
         <li>Als alles geïnstalleerd is, krijg je een overzicht op het einde alsook dat alles geslaagd is en klik op <strong>Close</strong>
             <img src="assets/img/SQLServer/18_Install_orig.png" alt="Install Complete" class="figuur">
+            Als je onderstaande foutmelding krijgt, kan je dit op onderstaande manier oplossen
+            <img src="assets/img/SQLServer/Error2.png" alt="Error" class="figuur">
+            <ol>
+                <li>Verwijder SQL Server.</li>
+                <li>Run Registry Editor als administrator uitvoeren.</li>
+                <li>Navigeer naar <code> Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device </code></li>
+                <li>Selecteer <strong>Edit</strong> →  <strong>New</strong> → <strong>Multi-String value</strong> en geef dit de naam <strong>ForcedPhysicalSectorSizeInBytes</strong></li>
+                <li>Rechtermuisklik op de naam en selecteer <strong>Modify</strong> en typ <code>* 4095</code> in het <strong>Value Data veld</strong></li>
+                <li>Klik op <strong>OK</strong> en sluit het register.</li>
+                <li>Herstart de computer en run de installatie van SQL Server opnieuw</li>
+            </ol>
+            <br>
         </li>
             <li>Je zal terug het eerste scherm te zien krijgen
             <img src="assets/img/SQLServer/8_Install_orig.png" alt="Install 1" class="figuur">
