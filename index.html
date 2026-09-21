@@ -39,13 +39,23 @@
 
         // INHOUD dynamisch laden
         function loadPage(page) {
+
             fetch(page)
                 .then(r => r.text())
                 .then(t => document.getElementById("content").innerHTML = t);
         }
 
         // Startpagina
-        loadPage("pages/home.html");
+        const params = new URLSearchParams(window.location.search);
+        console.log(params);
+        if(params && params.get("p")) {
+            console.log(params);
+            const page = params.get("p");
+            loadPage(`pages/${page}`);
+        }
+        else{
+            loadPage("pages/home.html");
+        }
     </script>       
 
 </body>
