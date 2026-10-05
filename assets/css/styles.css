@@ -6,7 +6,8 @@ body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
     overflow-y: visible;
-    scrollbar-gutter: stable; /* houdt ruimte voor scrollbar vrij */
+    scrollbar-gutter: stable;
+    /* houdt ruimte voor scrollbar vrij */
 }
 
 /* Header */
@@ -18,10 +19,11 @@ header {
     text-align: center;
     position: fixed;
     height: 70px;
-    top: 0;          
-    left: 0;       
-    right: 0;        
-    z-index: 1000;   /* voorkomt overlap */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    /* voorkomt overlap */
 }
 
 
@@ -37,9 +39,11 @@ header {
     background-color: #f4f4f4;
     border-right: 1px solid #ddd;
     padding-top: 20px;
-    height: calc(100vh - 70px); 
-    position: fixed; /* sidebar blijft staan */
-    top: 70px;         /* sidebar begint onder header */
+    height: calc(100vh - 70px);
+    position: fixed;
+    /* sidebar blijft staan */
+    top: 70px;
+    /* sidebar begint onder header */
 }
 
 .sidebar ul {
@@ -61,10 +65,12 @@ header {
 
 /* Content */
 #content {
-    padding: 20px; 
-    padding-top: 90px; /* ruimte voor header */
+    padding: 20px;
+    padding-top: 90px;
+    /* ruimte voor header */
     flex: 1;
-    margin-left: 220px; /*content moet opschuiven omdat sidebar nu blijft staan*/
+    margin-left: 220px;
+    /*content moet opschuiven omdat sidebar nu blijft staan*/
 }
 
 .sidebar-header {
@@ -100,20 +106,40 @@ h1 a:hover {
 
 /* figuren */
 .figuur {
-    max-width: 40%;          /* afbeelding schaalt mooi mee */
-    border: 1px solid #ddd;   /* subtiel kader */
-    border-radius: 8px;       /* afgeronde hoeken */
-    padding: 10px;            /* ruimte rond de afbeelding */
-    background-color: #f9f9f9;/* lichte achtergrond */
-    margin: 20px 0;           /* ruimte boven en onder */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* zachte schaduw */
+    max-width: 40%;
+    /* afbeelding schaalt mooi mee */
+    border: 1px solid #ddd;
+    /* subtiel kader */
+    border-radius: 8px;
+    /* afgeronde hoeken */
+    padding: 10px;
+    /* ruimte rond de afbeelding */
+    background-color: #f9f9f9;
+    /* lichte achtergrond */
+    margin: 20px 0;
+    /* ruimte boven en onder */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    /* zachte schaduw */
     display: block;
 }
 
 /* footer */
 footer {
-    color: #777;     /* tekst in het grijs */
+    color: #777;
+    /* tekst in het grijs */
     font-size: 0.85rem;
     padding: 15px 20px;
-    text-align: right;           /* tekst naar rechts */
+    text-align: right;
+    /* tekst naar rechts */
+}
+
+blockquote {
+    margin: 20px 0;
+    padding: 15px 20px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #0078d4;
+    border-radius: 8px;
+    font-style: italic;
+    color: #555;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
