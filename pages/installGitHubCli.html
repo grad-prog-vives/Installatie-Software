@@ -1,0 +1,120 @@
+<h2>GitHub CLI installeren en aanmelden</h2>
+Git is het programma <code>git</code>. GitHub CLI is het programma <code>gh</code>.<br>
+Met GitHub CLI kun je GitHub vanuit de terminal gebruiken en je gemakkelijk authenticeren.<br>
+GitHub ondersteunt op Windows installatie via WinGet.
+
+<div class="content">
+    <h3>1. GitHub CLI installeren</h3>
+    <ul>
+        <li>Open <strong>PowerShell</strong>.</li>
+        <li>Voer uit: <code>winget install --id GitHub.cli --source winget</code></li>
+        <li>Bevestig indien Windows hierom vraagt.
+            <img src="assets/img/GitHubCLI/01-winget-installeren.png" alt="winget install GitHub CLI" class="figuur">
+        </li>
+    </ul>
+
+    <h3>2. Terminal volledig opnieuw openen</h3>
+    <ul>
+        <li>Na installatie moet je de terminal volledig sluiten.</li>
+        <li>Open daarna een <strong>nieuwe</strong> PowerShell- of VS Code-terminal.</li>
+        <li>Een nieuwe tab in een reeds geopende Windows Terminal kan onvoldoende zijn nadat PATH werd gewijzigd.</li>
+    </ul>
+
+    <h3>3. Installatie controleren</h3>
+    <ul>
+        <li>Voer uit: <code>gh --version</code></li>
+        <li>Je moet een GitHub CLI-versie zien.
+            <img src="assets/img/GitHubCLI/02-gh-version.png" alt="gh --version" class="figuur">
+        </li>
+    </ul>
+
+    <h3>4. Aanmelden</h3>
+    <ul>
+        <li>Voer uit: <code>gh auth login</code></li>
+    </ul>
+
+    <h3>5. Kies GitHub.com</h3>
+    <ul>
+        <li>Je krijgt een vraag zoals: <code>Where do you use GitHub?</code></li>
+        <li>Kies <strong>GitHub.com</strong>.</li>
+    </ul>
+
+    <h3>6. Kies HTTPS</h3>
+    <ul>
+        <li>Bij <code>What is your preferred protocol for Git operations?</code> kies je <strong>HTTPS</strong>.</li>
+        <li>We gebruiken voorlopig HTTPS voor GitHub.</li>
+    </ul>
+
+    <h3>7. Git ook authenticeren</h3>
+    <ul>
+        <li>Als je gevraagd wordt: <code>Authenticate Git with your GitHub credentials?</code> kies je <strong>Yes</strong>.</li>
+        <li>Als je HTTPS kiest en dit bevestigt, kan GitHub CLI je Git-credentials mee configureren.</li>
+    </ul>
+
+    <h3>8. Aanmelden via browser</h3>
+    <ul>
+        <li>Kies <strong>Login with a web browser</strong>.</li>
+        <li>Er verschijnt een tijdelijke code, bijvoorbeeld <code>ABCD-1234</code>.</li>
+        <li><strong>De code in jouw terminal zal anders zijn.</strong>
+            <img src="assets/img/GitHubCLI/03-gh-auth-login.png" alt="gh auth login met keuzes en device code" class="figuur">
+        </li>
+    </ul>
+
+    <h3>9. Open de browser</h3>
+    <ul>
+        <li>Druk indien gevraagd op <strong>Enter</strong>.</li>
+        <li>De browser opent GitHub.</li>
+        <li>Controleer <strong>zeer goed</strong> met welk GitHub-account je in de browser bent aangemeld.</li>
+        <li>Het moet hetzelfde account zijn dat je voor je vakken gebruikt en waaraan je <code>@student.vives.be</code>-adres gekoppeld is.</li>
+    </ul>
+
+    <h3>10. Device code bevestigen</h3>
+    <ul>
+        <li>Als GitHub vraagt om de code in te voeren:
+            <ul>
+                <li>plak de code</li>
+                <li>klik op <strong>Continue</strong></li>
+                <li>controleer het GitHub-account</li>
+                <li>autoriseer GitHub CLI.</li>
+            </ul>
+        </li>
+        <li>Klik indien gevraagd op <strong>Authorize GitHub</strong>.
+            <img src="assets/img/GitHubCLI/04-device-activeren.png" alt="GitHub device activation" class="figuur">
+            <img src="assets/img/GitHubCLI/05-github-cli-autoriseren.png" alt="Authorize GitHub CLI" class="figuur">
+        </li>
+    </ul>
+
+    <h3>11. Controle</h3>
+    <ul>
+        <li>Ga terug naar PowerShell.</li>
+        <li>Voer uit: <code>gh auth status</code></li>
+        <li>Je moet zien dat je ingelogd bent op <code>github.com</code> met je juiste username.
+            <img src="assets/img/GitHubCLI/06-gh-auth-status.png" alt="gh auth status" class="figuur">
+        </li>
+    </ul>
+
+    <h3>Verkeerd account gebruikt?</h3>
+    <ul>
+        <li>Controleer met: <code>gh auth status</code></li>
+        <li>Ben je met het verkeerde account ingelogd? Voer uit: <code>gh auth logout</code></li>
+        <li>Daarna opnieuw: <code>gh auth login</code></li>
+    </ul>
+
+    <h3>Als Git nog steeds authenticatieproblemen geeft</h3>
+    <ul>
+        <li>Als je tijdens <code>gh auth login</code> niet gekozen hebt om Git mee te configureren, kun je uitvoeren: <code>gh auth setup-git</code></li>
+        <li>Dit configureert Git om GitHub CLI als credential helper te gebruiken.</li>
+    </ul>
+
+    <h3>Eindcontrole Git + GitHub CLI</h3>
+    <ul>
+        <li>Deze twee commando's moeten werken: <code>git --version</code> en <code>gh auth status</code>.</li>
+        <li>Als beide correct zijn, is je lokale basisconfiguratie klaar.</li>
+    </ul>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p>Laatste update: Oktober 2026</p>
+    </div>
+</footer>

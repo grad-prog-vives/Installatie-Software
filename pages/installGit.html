@@ -1,0 +1,159 @@
+<h2>Installatie van Git</h2>
+In deze handleiding installeren we <strong>Git</strong> op Windows en configureren we Git zodat je het vanuit Visual Studio Code en PowerShell kunt gebruiken.<br>
+Git en GitHub zijn niet hetzelfde: Git is het programma op je computer voor versiebeheer. GitHub is het online platform voor repositories.
+
+<div class="content">
+    <h3>1. Controleer eerst of Git al geïnstalleerd is</h3>
+    <ul>
+        <li>Open <strong>PowerShell</strong> of de terminal in Visual Studio Code.</li>
+        <li>Voer uit: <code>git --version</code>
+            <img src="assets/img/Git/01-git-version-controleren.png" alt="PowerShell met git --version" class="figuur">
+        </li>
+        <li>Als je bijvoorbeeld <code>git version 2.x.x.windows.x</code> ziet, is Git al geïnstalleerd. Ga dan rechtstreeks naar <strong>Git configureren</strong> (vanaf stap 14).</li>
+        <li>Als Windows meldt dat <code>git</code> niet herkend wordt, volg dan de installatie hieronder.</li>
+    </ul>
+
+    <h3>2. Git downloaden</h3>
+    <ul>
+        <li>Open de <a href="https://git-scm.com/install/windows">officiële Git-pagina voor Windows</a>.</li>
+        <li>Voor de meeste studenten met Windows 11 kies je <strong>Git for Windows/x64 Setup</strong>.
+            <img src="assets/img/Git/02-downloadpagina-x64-setup.png" alt="Git for Windows downloadpagina x64 Setup" class="figuur">
+        </li>
+    </ul>
+
+    <h3>3. Installer starten</h3>
+    <ul>
+        <li>Open het gedownloade <code>.exe</code>-bestand.</li>
+        <li>Windows kan vragen: <em>Do you want to allow this app to make changes to your device?</em></li>
+        <li>Klik op <strong>Yes</strong>.
+            <img src="assets/img/Git/03-windows-uac.png" alt="Windows UAC-venster" class="figuur">
+        </li>
+    </ul>
+
+    <h3>4. Installatielocatie</h3>
+    <ul>
+        <li>Bij <strong>Select Destination Location</strong> mag je de standaardlocatie behouden (bijvoorbeeld <code>C:\Program Files\Git</code>).</li>
+        <li>Klik op <strong>Next</strong>.</li>
+    </ul>
+
+    <h3>5. Components</h3>
+    <ul>
+        <li>Bij <strong>Select Components</strong> behouden we de standaardinstellingen.</li>
+        <li>Klik op <strong>Next</strong>. Je hoeft hier niets speciaal aan te passen.
+            <img src="assets/img/Git/05-onderdelen.png" alt="Select Components met standaardkeuzes" class="figuur">
+        </li>
+    </ul>
+
+    <h3>6. Start Menu</h3>
+    <ul>
+        <li>Bij <strong>Select Start Menu Folder</strong> behoud je <code>Git</code>.</li>
+        <li>Klik op <strong>Next</strong>.</li>
+    </ul>
+
+    <h3>7. Kies een eenvoudige editor</h3>
+    <ul>
+        <li>Je krijgt het scherm <strong>Choosing the default editor used by Git</strong>.</li>
+        <li>Omdat we in deze opleiding Visual Studio Code gebruiken, kies je indien beschikbaar: <strong>Use Visual Studio Code as Git's default editor</strong>.</li>
+        <li>Als Visual Studio Code daar niet beschikbaar is, mag je bijvoorbeeld <strong>Notepad</strong> gebruiken.</li>
+        <li>Voor beginners is <strong>Vim</strong> niet aangeraden, omdat het afsluiten en bedienen daarvan in het begin onnodig verwarrend kan zijn.
+            <img src="assets/img/Git/06-standaardeditor-vscode.png" alt="Visual Studio Code als standaardeditor" class="figuur">
+        </li>
+    </ul>
+
+    <h3>8. Standaardbranch instellen op main</h3>
+    <ul>
+        <li>Bij <strong>Adjusting the name of the initial branch in new repositories</strong> kies je: <strong>Override the default branch name for new repositories</strong>.</li>
+        <li>Vul in: <code>main</code>.</li>
+        <li>Zo beginnen nieuwe repositories standaard met een branch genaamd <code>main</code>.
+            <img src="assets/img/Git/07-standaardbranch-main.png" alt="Standaardbranch main" class="figuur">
+        </li>
+    </ul>
+
+    <h3>9. Git beschikbaar maken in PowerShell en VS Code</h3>
+    <ul>
+        <li>Bij <strong>Adjusting your PATH environment</strong> kies je: <strong>Git from the command line and also from 3rd-party software</strong>.</li>
+        <li>Dit is belangrijk omdat we Git ook vanuit PowerShell, VS Code en andere developmenttools willen gebruiken.
+            <img src="assets/img/Git/08-path-opdrachtregel.png" alt="Git from the command line and also from 3rd-party software" class="figuur">
+        </li>
+    </ul>
+
+    <h3>10. OpenSSH</h3>
+    <ul>
+        <li>Als je het scherm <strong>Choosing the SSH executable</strong> krijgt, behoud je: <strong>Use bundled OpenSSH</strong>.</li>
+        <li>Klik op <strong>Next</strong>.</li>
+        <li>We gebruiken GitHub-authenticatie voorlopig via HTTPS. SSH komt later terug voor Linux-servers.
+            <img src="assets/img/Git/09-openssh-meegeleverd.png" alt="Use bundled OpenSSH" class="figuur">
+        </li>
+    </ul>
+
+    <h3>11. Overige instellingen</h3>
+    <ul>
+        <li>Voor de overige installatieschermen mag je de <strong>standaardinstellingen behouden</strong> (HTTPS transport, line endings, terminal emulator, git pull behaviour, credential helper, extra options).</li>
+        <li>Klik telkens op <strong>Next</strong> tot je bij <strong>Install</strong> komt.</li>
+        <li>Je hoeft deze opties voor deze opleiding niet afzonderlijk te wijzigen.</li>
+    </ul>
+
+    <h3>12. Git installeren</h3>
+    <ul>
+        <li>Klik op <strong>Install</strong>.</li>
+        <li>Wacht tot de installatie voltooid is.</li>
+        <li>Daarna klik je op <strong>Finish</strong>.
+            <img src="assets/img/Git/10-installeren.png" alt="Laatste installatiescherm met Install" class="figuur">
+        </li>
+    </ul>
+
+    <h3>13. Terminal opnieuw openen</h3>
+    <ul>
+        <li>Sluit PowerShell en/of Visual Studio Code volledig af.</li>
+        <li>Open daarna opnieuw een terminal.</li>
+        <li>Voer uit: <code>git --version</code></li>
+        <li>Je moet nu een Git-versie zien.
+            <img src="assets/img/Git/11-git-version-geslaagd.png" alt="Geslaagde git --version" class="figuur">
+        </li>
+    </ul>
+
+    <h3>14. Je naam configureren</h3>
+    <ul>
+        <li>Git moet weten wie commits maakt. Gebruik je <strong>echte voor- en achternaam</strong>.</li>
+        <li>Bijvoorbeeld: <code>git config --global user.name "Voornaam Achternaam"</code></li>
+        <li>Dus bijvoorbeeld: <code>git config --global user.name "Jan Janssens"</code>
+            <img src="assets/img/Git/12-git-user-name.png" alt="git config user.name" class="figuur">
+        </li>
+    </ul>
+
+    <h3>15. Je VIVES-e-mailadres configureren</h3>
+    <ul>
+        <li>Gebruik je officiële <code>@student.vives.be</code>-e-mailadres.</li>
+        <li>Bijvoorbeeld: <code>git config --global user.email "voornaam.achternaam@student.vives.be"</code></li>
+        <li>Dit e-mailadres moet ook aan je GitHub-account gekoppeld en geverifieerd zijn, zodat GitHub je commits correct aan je account kan koppelen.
+            <img src="assets/img/Git/13-git-user-email.png" alt="git config user.email" class="figuur">
+        </li>
+    </ul>
+
+    <h3>16. main instellen</h3>
+    <ul>
+        <li>Voer ook uit: <code>git config --global init.defaultBranch main</code></li>
+        <li>Hierdoor gebruikt Git <code>main</code> als standaardbranch bij nieuwe repositories.
+            <img src="assets/img/Git/14-git-default-branch-main.png" alt="git config init.defaultBranch main" class="figuur">
+        </li>
+    </ul>
+
+    <h3>17. Controle</h3>
+    <ul>
+        <li>Voer uit: <code>git config --global --list</code></li>
+        <li>Controleer minstens:
+            <ul>
+                <li><code>user.name=...</code></li>
+                <li><code>user.email=...@student.vives.be</code></li>
+                <li><code>init.defaultbranch=main</code></li>
+            </ul>
+            <img src="assets/img/Git/15-git-config-controle.png" alt="git config --global --list controle" class="figuur">
+        </li>
+    </ul>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p>Laatste update: Oktober 2026</p>
+    </div>
+</footer>
