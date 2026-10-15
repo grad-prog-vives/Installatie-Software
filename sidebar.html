@@ -1,24 +1,33 @@
 
-<nav class="sidebar">
-    <h3 class="sidebar-header">Installatie Software</h3>
-    <ul>
-        <li><a href="#" onclick="loadPage('pages/installSqlServer.html')">Installatie SQL Server</a></li>
-        <li><a href="#" onclick="loadPage('pages/installSSMS.html')">Installatie SQL Server Management Studio (SSMS)</a></li>
-        <li><a href="#" onclick="loadPage('pages/installVisualStudio.html')">Installatie Visual Studio</a></li>
-        <!-- <li><a href="#" onclick="loadPage('pages/installVisualStudioCode.html')">Installatie Visual Studio Code</a></li>-->
-        <li><a href="#" onclick="loadPage('pages/installVisualStudioCode.html')">Installatie Visual Studio Code (VS Code)</a></li>
-        <!--<li><a href="#" onclick="loadPage('contact.html')">Contact</a></li>-->
-    </ul>
-    
-    <h3 class="sidebar-header">Handleidingen</h3>
-    <ul>
-        <li><a href="#" onclick="loadPage('pages/checkVisualStudioAI.html')">Visual Studio AI-check</a></li>
-    </ul>
+<nav class="topmenu">
+    <ul class="menu">
 
-    <h3 class="sidebar-header">Git &amp; GitHub</h3>
-    <ul>
-        <li><a href="#" onclick="loadPage('pages/installGit.html')">Installatie Git</a></li>
-        <li><a href="#" onclick="loadPage('pages/githubAccount.html')">GitHub-account aanmaken</a></li>
-        <li><a href="#" onclick="loadPage('pages/installGitHubCli.html')">GitHub CLI</a></li>
+        <li class="dropdown">
+            <button class="dropdown-toggle">Installatie software ▾</button>
+            <ul class="dropdown-menu">
+                <li><a href="#" onclick="loadPage('pages/installSqlServer.html')">Installatie SQL Server</a></li>
+                <li><a href="#" onclick="loadPage('pages/installSSMS.html')">Installatie SQL Server Management Studio (SSMS)</a></li>
+                <li><a href="#" onclick="loadPage('pages/installVisualStudio.html')">Installatie Visual Studio</a></li>
+                <li><a href="#" onclick="loadPage('pages/installVisualStudioCode.html')">Installatie Visual Studio Code (VS Code)</a></li>
+                <!--<li><a href="#" onclick="loadPage('contact.html')">Contact</a></li>-->
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <button class="dropdown-toggle">Handleidingen ▾</button>
+            <ul class="dropdown-menu">
+                <li><a href="#" onclick="loadPage('pages/checkVisualStudioAI.html')">Visual Studio AI-check</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <button class="dropdown-toggle">Git &amp; GitHub ▾</button>
+            <ul class="dropdown-menu">
+                <li><a href="#" onclick="loadPage('pages/installGit.html')">Installatie Git</a></li>
+                <li><a href="#" onclick="loadPage('pages/githubAccount.html')">GitHub-account aanmaken</a></li>
+                <li><a href="#" onclick="loadPage('pages/installGitHubCli.html')">GitHub CLI</a></li>
+            </ul>
+        </li>
+
     </ul>
 </nav>

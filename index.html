@@ -32,10 +32,40 @@
             .then(r => r.text())
             .then(t => document.getElementById("sidebar").innerHTML = t);
 
-        // Wacht tot header én sidebar geladen zijn
+        // // Wacht tot header én sidebar geladen zijn
+        // Promise.all([headerPromise, sidebarPromise]).then(() => {
+        //     const headerHeight = document.getElementById("header").offsetHeight;
+        //     document.getElementById("sidebar").style.top = headerHeight + "px";
+        // });
+
+        // Wacht tot header én menu geladen zijn: menu onder header, inhoud onder menu
         Promise.all([headerPromise, sidebarPromise]).then(() => {
-            const headerHeight = document.getElementById("header").offsetHeight;
-            document.getElementById("sidebar").style.top = headerHeight + "px";
+            const headerHeight = document.querySelector("header").offsetHeight;
+            const menu = document.getElementById("sidebar");
+            menu.style.top = headerHeight + "px";
+            document.getElementById("content").style.marginTop =
+                (headerHeight + menu.offsetHeight) + "px";
+        });
+
+        // DROPDOWNS openen/sluiten
+        document.addEventListener("click", e => {
+            const toggle = e.target.closest(".dropdown-toggle");
+            document.querySelectorAll(".dropdown.open").forEach(d => {
+                if (!toggle || d !== toggle.parentElement) d.classList.remove("open");
+            });
+            if (toggle) toggle.parentElement.classList.toggle("open");
+            if (e.target.closest(".dropdown-menu a")) {
+                document.querySelectorAll(".dropdown.open").forEach(d => d.classList.remove("open"));
+            }
+        });
+
+        // Bij hover over een ander menu: open geklikte menu's sluiten
+        document.addEventListener("mouseover", e => {
+            const dd = e.target.closest(".dropdown");
+            if (!dd) return;
+            document.querySelectorAll(".dropdown.open").forEach(d => {
+                if (d !== dd) d.classList.remove("open");
+            });
         });
 
         // INHOUD dynamisch laden

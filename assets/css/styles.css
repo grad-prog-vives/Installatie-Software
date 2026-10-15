@@ -15,7 +15,6 @@ header {
     background-color: #0078d4;
     color: white;
     padding: 15px;
-    padding-bottom: 15px;
     text-align: center;
     position: fixed;
     height: 70px;
@@ -26,64 +25,95 @@ header {
     /* voorkomt overlap */
 }
 
-
 /* Layout */
 .container {
-    display: flex;
-    height: calc(100vh - 60px);
-}
-
-/* Sidebar */
-.sidebar {
-    width: 220px;
-    background-color: #f4f4f4;
-    border-right: 1px solid #ddd;
-    padding-top: 20px;
-    height: calc(100vh - 70px);
-    position: fixed;
-    /* sidebar blijft staan */
-    top: 70px;
-    /* sidebar begint onder header */
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar li a {
     display: block;
-    padding: 12px 20px;
-    text-decoration: none;
+}
+
+/* Menu (onder de header) */
+#sidebar {
+    position: fixed;
+    top: 100px;          /* net onder de header */
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #f3f3f3;
+    border-bottom: 2px solid #0078d4;
+}
+
+.topmenu .menu {
+    display: flex;
+    justify-content: flex-start;
+    gap: 4px;
+    margin: 0;
+    padding: 0 16px;
+    list-style: none;
+    text-align: left;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 12px 16px;
+    font: inherit;
+    font-weight: bold;
+    color: #0078d4;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.dropdown-toggle:hover,
+.dropdown.open .dropdown-toggle {
+    background: #e2e2e2;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    min-width: 290px;
+    margin: 0;
+    padding: 6px 0;
+    list-style: none;
+    background: white;
+    border: 1px solid #ddd;
+}
+
+.dropdown.open .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 16px;
     color: #333;
     font-weight: bold;
+    text-decoration: none;
 }
 
-.sidebar li a:hover {
-    background-color: #e0e0e0;
+.dropdown-menu a:hover {
+    background: #f3f3f3;
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    .topmenu .menu { flex-direction: column; padding: 0; }
+    .dropdown-menu { position: static; border: none; }
 }
 
 /* Content */
 #content {
-    padding: 20px;
-    padding-top: 90px;
-    /* ruimte voor header */
-    flex: 1;
-    margin-left: 220px;
-    /*content moet opschuiven omdat sidebar nu blijft staan*/
+    margin-left: 0;
+    padding: 20px 30px;
+    margin-top: 150px;   /* header (100px) + menu (ongeveer 48px) */
 }
-
-.sidebar-header {
-    margin: 28px 0 8px;
-    padding-bottom: 6px;
-    padding-left: 6px;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: #0078d4;
-    border-bottom: 2px solid #0078d4;
-}
-
 
 /* URL's */
 a {
@@ -107,30 +137,21 @@ h1 a:hover {
 /* figuren */
 .figuur {
     max-width: 40%;
-    /* afbeelding schaalt mooi mee */
     border: 1px solid #ddd;
-    /* subtiel kader */
     border-radius: 8px;
-    /* afgeronde hoeken */
     padding: 10px;
-    /* ruimte rond de afbeelding */
     background-color: #f9f9f9;
-    /* lichte achtergrond */
     margin: 20px 0;
-    /* ruimte boven en onder */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    /* zachte schaduw */
     display: block;
 }
 
 /* footer */
 footer {
     color: #777;
-    /* tekst in het grijs */
     font-size: 0.85rem;
     padding: 15px 20px;
     text-align: right;
-    /* tekst naar rechts */
 }
 
 blockquote {
@@ -142,4 +163,14 @@ blockquote {
     font-style: italic;
     color: #555;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Openen bij hover (alleen op toestellen met een muis) */
+@media (hover: hover) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+    .dropdown:hover .dropdown-toggle {
+        background: #e2e2e2;
+    }
 }
