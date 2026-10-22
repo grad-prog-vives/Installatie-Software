@@ -32,20 +32,6 @@
             .then(r => r.text())
             .then(t => document.getElementById("sidebar").innerHTML = t);
 
-        // // Wacht tot header én sidebar geladen zijn
-        // Promise.all([headerPromise, sidebarPromise]).then(() => {
-        //     const headerHeight = document.getElementById("header").offsetHeight;
-        //     document.getElementById("sidebar").style.top = headerHeight + "px";
-        // });
-
-        // Wacht tot header én menu geladen zijn: menu onder header, inhoud onder menu
-        Promise.all([headerPromise, sidebarPromise]).then(() => {
-            const headerHeight = document.querySelector("header").offsetHeight;
-            const menu = document.getElementById("sidebar");
-            menu.style.top = headerHeight + "px";
-            document.getElementById("content").style.marginTop =
-                (headerHeight + menu.offsetHeight) + "px";
-        });
 
         // DROPDOWNS openen/sluiten
         document.addEventListener("click", e => {
