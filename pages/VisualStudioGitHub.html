@@ -1,0 +1,116 @@
+<main class="content">
+    <h2>Clonen en pushen met GitHub in Visual Studio</h2>
+    <p>
+        Met Git hou je de versies van je code bij. Op GitHub staat een online kopie van je project: de
+        <strong>remote repository</strong>. Op je eigen pc werk je in een <strong>lokale repository</strong>.
+    <img src="assets/img/GitHub/ClonePush.png" alt="Clonen en pushen Github" class="figuur">
+    </p>
+    <p>In deze handleiding doe je drie dingen:</p>
+    <ul>
+        <li><strong>Clone</strong>: je haalt een repository van GitHub naar je pc. Dit doe je maar één keer per project.</li>
+        <li><strong>Commit</strong>: je bewaart je wijzigingen. Een commit staat alleen op je eigen pc.</li>
+        <li><strong>Push</strong>: je stuurt je commits naar GitHub.</li>
+    </ul>
+
+    <h3>1. Link van de repository kopiëren</h3>
+    <ul>
+        <li>Klik op de link dat je krijgt naar de repository.</li>
+        <li>
+            Klik op de groene knop <strong>Code</strong>.<br>
+            Kies het tabblad <strong>HTTPS</strong> en klik op het kopieer-icoon naast de link.
+            <img src="assets/img/GitHub/1_GitHub_Code.png" alt="Knop Code op GitHub met de HTTPS-link" class="figuur">
+        </li>
+        <li>De link eindigt altijd op <code>.git</code>, bijvoorbeeld <code>https://github.com/grad-prog-bap/oe-Lists.git</code>.</li>
+    </ul>
+
+    <h3>2. Repository clonen in Visual Studio</h3>
+    <ul>
+        <li>
+            Start Visual Studio. Klik in het startvenster rechts op <strong>Clone a repository</strong>.
+            <img src="assets/img/GitHub/2_Startvenster.png" alt="Startvenster met Clone a repository" class="figuur">
+        </li>
+        <li>
+            Staat er al een project open? Kies dan in het menu <strong>Git</strong> voor <strong>Clone Repository...</strong>
+            <img src="assets/img/GitHub/3_Menu_Git.png" alt="Menu Git met Clone Repository" class="figuur">
+        </li>
+        <li>
+            In het venster <strong>Clone a repository</strong>:
+            <ul>
+                <li>Plak de link bij <strong>Repository location</strong>.</li>
+                <li>Kies bij <strong>Path</strong> de map waar het project op je pc komt, bijvoorbeeld <code>C:\Repos\oe-Lists</code>.</li>
+                <li>Klik op <strong>Clone</strong>.</li>
+            </ul>
+             <li>Kies een map <strong>buiten OneDrive</strong>. OneDrive en Git zitten elkaar vaak in de weg.</li>
+        <li>
+            Krijg je een aanmeldvenster? Kies dan <strong>Sign in with your browser</strong> en log in met je GitHub-account.
+            Visual Studio onthoudt dit daarna.
+        </li>
+            <img src="assets/img/GitHub/4_Clone.png" alt="Venster Clone a repository ingevuld" class="figuur">
+        </li>
+       
+    </ul>
+
+    <h3>3. Solution openen</h3>
+    <ul>
+        <li>
+            Visual Studio downloadt de bestanden en toont de map in de <strong>Solution Explorer</strong>.<br>
+            Zie je alleen mappen? Dubbelklik dan op het bestand <code>Lists.sln</code> (of <code>Lists.slnx</code>).
+            <img src="assets/img/GitHub/5_Solution_Explorer.png" alt="Solution Explorer na het clonen" class="figuur">
+        </li>
+        <li>Rechts onderaan in de statusbalk zie je de naam van de branch, <code>master</code>. Zo weet je dat Git actief is.</li>
+        <li>Een volgende keer open je het project gewoon via <strong>Open recent</strong> in het startvenster. Je moet niet opnieuw clonen.</li>
+    </ul>
+
+    <h3>4. Wijzigingen committen</h3>
+    <ul>
+        <li>Pas je code aan en sla op met <code>Ctrl + S</code>.</li>
+        <li>
+            Open het venster <strong>Git Changes</strong> via <strong>View &gt; Git Changes</strong>.<br>
+            Onder <strong>Changes</strong> staan de bestanden die je gewijzigd hebt.
+            <ul>
+                <li><code>M</code> = modified (gewijzigd)</li>
+                <li><code>A</code> = added (nieuw toegevoegd)</li>
+            </ul>
+             <img src="assets/img/GitHub/6_Git_Changes.png" alt="Git Changes" class="figuur">
+        </li>
+        <li>
+            Typ in het tekstvak een korte boodschap in het Engels, bijvoorbeeld <code>Add Excercise 2 to Readme.md</code>.
+        </li>
+        <li>
+            Klik op <strong>Commit All</strong>.
+            <img src="assets/img/GitHub/6_Git_Changes2.png" alt="Git Changes met commit-boodschap" class="figuur">
+        </li>
+        <li>Je wijziging staat nu <strong>alleen op je eigen pc</strong>. GitHub weet er nog niets van.</li>
+    </ul>
+
+    <h3>5. Pushen naar GitHub</h3>
+    <ul>
+        <li>
+            Klik bovenaan in <strong>Git Changes</strong> op het icoon <strong>Push</strong> (pijl omhoog).<br>
+            Je kan ook in het menu <strong>Git</strong> kiezen voor <strong>Push</strong>.
+            <img src="assets/img/GitHub/7_Push.png" alt="Push-knop in Git Changes" class="figuur">
+        </li>
+        <li>Is het gelukt, dan verschijnt de melding <strong>Successfully pushed to origin/master</strong>.</li>
+        <li>
+            Sneller: klik op het pijltje naast <strong>Commit All</strong> en kies <strong>Commit All and Push</strong>.
+            Dan commit en push je in één keer.
+            <img src="assets/img/GitHub/8_CommitAndPush.png" alt="Commit & Push" class="figuur">
+        </li>
+    </ul>
+
+    <h3>6. Controle op GitHub</h3>
+    <ul>
+        <li>
+            Vernieuw de pagina van je repository op GitHub.<br>
+            Bovenaan zie je je naam, je commit-boodschap en <em>now</em> of <em>2 minutes ago</em>.
+            <img src="assets/img/GitHub/9_GitHub_Commit.png" alt="Nieuwe commit zichtbaar op GitHub" class="figuur">
+        </li>
+    </ul>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <p>Laatste update: oktober 2026</p>
+    </div>
+</footer>

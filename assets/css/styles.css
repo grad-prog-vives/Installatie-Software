@@ -6,8 +6,7 @@ body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
     overflow-y: visible;
-    scrollbar-gutter: stable;
-    /* houdt ruimte voor scrollbar vrij */
+    scrollbar-gutter: stable;  /* houdt ruimte voor scrollbar vrij */
 }
 
 /* Header */
@@ -21,8 +20,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
-    /* voorkomt overlap */
+    z-index: 1000; /* voorkomt overlap */
 }
 
 /* Layout */
@@ -108,6 +106,39 @@ header {
     .dropdown-menu { position: static; border: none; }
 }
 
+/* Openen bij hover (alleen op toestellen met een muis) */
+@media (hover: hover) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+    .dropdown:hover .dropdown-toggle {
+        background: #e2e2e2;
+    }
+}
+
+/*Navbar op page*/
+.toc{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:18px
+}
+
+.toc a{
+    color:var(--fg);
+    text-decoration:none;
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:6px 14px;
+    font-weight:700;
+    background:var(--surface)
+}
+
+.toc a:hover,.toc a:focus-visible{
+    border-color:var(--accent);
+    outline:none
+}
+
 /* Content */
 #content {
     margin-left: 0;
@@ -136,22 +167,22 @@ h1 a:hover {
 
 /* figuren */
 .figuur {
-    max-width: 40%;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    margin: 20px 0;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 40%;     /* afbeelding schaalt mooi mee */
+    border: 1px solid #ddd;     /* subtiel kader */
+    border-radius: 8px; /* afgeronde hoeken */
+    padding: 10px;      /* ruimte rond de afbeelding */
+    background-color: #f9f9f9;  /* lichte achtergrond */
+    margin: 20px 0;  /* ruimte boven en onder */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);  /* zachte schaduw */
     display: block;
 }
 
 /* footer */
 footer {
-    color: #777;
+    color: #777; /* tekst in het grijs */
     font-size: 0.85rem;
     padding: 15px 20px;
-    text-align: right;
+    text-align: right; /* tekst naar rechts */
 }
 
 blockquote {
@@ -165,12 +196,3 @@ blockquote {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Openen bij hover (alleen op toestellen met een muis) */
-@media (hover: hover) {
-    .dropdown:hover .dropdown-menu {
-        display: block;
-    }
-    .dropdown:hover .dropdown-toggle {
-        background: #e2e2e2;
-    }
-}
