@@ -184,6 +184,33 @@ h1 a:hover {
     margin: 20px 0;  /* ruimte boven en onder */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);  /* zachte schaduw */
     display: block;
+    cursor: zoom-in;    /* toont dat je kan klikken om te vergroten */
+}
+
+/* Vergrote figuur over het hele scherm */
+#lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;                         /* top, right, bottom, left = 0 */
+    z-index: 2000;                    /* boven het menu (999) */
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    cursor: zoom-out;
+}
+ 
+#lightbox.open {
+    display: flex;
+}
+ 
+#lightbox img {
+    max-width: 100%;
+    max-height: 100%;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* footer */

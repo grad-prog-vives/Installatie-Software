@@ -21,6 +21,10 @@
         <main id="content"></main>
     </div>
 
+    <!-- Vergrote figuur -->
+    <div id="lightbox">
+        <img src="" alt="">
+    </div>
         <script>
         // HEADER laden
         const headerPromise = fetch("header.html")
@@ -71,6 +75,26 @@
         else{
             loadPage("pages/home.html");
         }
+
+        // FIGUREN vergroten bij klikken
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = lightbox.querySelector("img");
+
+        document.addEventListener("click", e => {
+            const figuur = e.target.closest("img.figuur");
+            if (figuur) {
+                lightboxImg.src = figuur.src;
+                lightboxImg.alt = figuur.alt;
+                lightbox.classList.add("open");
+            } else if (e.target.closest("#lightbox")) {
+                lightbox.classList.remove("open");   // klik op de vergroting = sluiten
+            }
+        });
+
+        // Sluiten met de Esc-toets
+        document.addEventListener("keydown", e => {
+            if (e.key === "Escape") lightbox.classList.remove("open");
+        });
     </script>       
 
 </body>
